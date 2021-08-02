@@ -415,7 +415,7 @@ const Base = () => {
     <>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div style={style.scoreBorad} className='score'>
-          {`Score : ${score}`}
+          {`Score: ${score}`}
         </div>
         <div onClick={resetGame} style={style.tryAgainButton}>
           New Game
