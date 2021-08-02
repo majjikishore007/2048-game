@@ -1,0 +1,20 @@
+.block {
+    height: 2em;
+    width: 5em;
+    background: lightgray;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: white;
+}
+
+@media (min-width: 70em) {
+    .block {
+        width: 4em;
+        height: 4em;
+        margin: 3px;
+    }
+}
