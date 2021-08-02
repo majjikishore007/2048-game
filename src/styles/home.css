@@ -6,17 +6,21 @@ header {
 }
 
 .btn-play {
-    width: 6em;
-    height: 3em;
+    width: 3em;
+    height: 2em;
     border: none;
-    background-color: #62af1a;
+    background-color: #1a47af;
     color: #fff;
     font-size: 1em;
     border-radius: 3px;
+    text-decoration: none;
+    padding:0.6em;
+    position: relative;
+    top: 1em;
 }
 
 .btn-play:hover {
-    background-color: white;
+    background-color: rgb(195, 136, 27);
 }
 
 header span {
@@ -69,6 +73,7 @@ h1 {
 
 body {
     font-family: 'Exo', sans-serif;
+    height: 100vh;
 }
 
 
@@ -87,7 +92,6 @@ body {
 
 
 .area {
-    background: #4e54c8;
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
     height: 100vh;
@@ -102,6 +106,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: -1;
 }
 
 .circles li {
@@ -209,3 +214,4 @@ body {
     }
 
 }
+

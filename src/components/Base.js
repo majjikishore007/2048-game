@@ -3,7 +3,7 @@ import { cloneDeep } from "lodash";
 import Board from "./Board";
 import { useEvent } from "./util";
 import Swipe from "react-easy-swipe";
-
+import { Link, Redirect, withRouter } from "react-router-dom";
 const style = {
   blockStyle: {
     height: 80,
@@ -18,7 +18,7 @@ const style = {
     color: "white",
   },
   newGameButton: {
-    padding: 10,
+    padding: 20,
     background: "#846F5B",
     color: "#F8F5F0",
     width: 95,
@@ -29,7 +29,7 @@ const style = {
     cursor: "pointer",
   },
   tryAgainButton: {
-    padding: 10,
+    padding: 20,
     background: "#846F5B",
     color: "#F8F5F0",
     width: 80,
@@ -38,6 +38,32 @@ const style = {
     cursor: "pointer",
     margin: "auto",
     marginTop: 20,
+    marginBottom: 20,
+  },
+  scoreBorad: {
+    padding: 20,
+    background: "#846F5B",
+    color: "#F8F5F0",
+    width: 80,
+    borderRadius: 7,
+    fontWeight: "900",
+    cursor: "pointer",
+    margin: "auto",
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  home: {
+    padding: 20,
+    background: "#846F5B",
+    color: "#F8F5F0",
+    width: 80,
+    borderRadius: 7,
+    fontWeight: "900",
+    cursor: "pointer",
+    margin: "auto",
+    marginTop: 20,
+    marginBottom: 20,
+    textDecoration: "none",
   },
   gameOverOverlay: {
     position: "absolute",
@@ -387,7 +413,14 @@ const Base = () => {
 
   return (
     <>
-      <h2>{score}</h2>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <div style={style.scoreBorad} className='score'>
+          {`Score : ${score}`}
+        </div>
+        <div onClick={resetGame} style={style.tryAgainButton}>
+          New Game
+        </div>
+      </div>
       {gameOver && (
         <div style={style.gameOverOverlay}>
           <div>
@@ -427,6 +460,11 @@ const Base = () => {
       >
         <Board data={data}></Board>
       </Swipe>
+      <div style={style.home}>
+        <Link style={style.home} to='/' className=''>
+          Home
+        </Link>
+      </div>
     </>
   );
 };
