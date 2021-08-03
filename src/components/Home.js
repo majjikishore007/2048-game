@@ -28,7 +28,7 @@ const Home = () => {
             </p>
           </div>
           <Link to='/game' className='btn-play'>
-            paly
+            Play
           </Link>
         </div>
       </div>
