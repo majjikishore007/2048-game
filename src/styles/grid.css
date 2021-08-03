@@ -1,8 +1,7 @@
 .grid {
     background-color: #AD9D8F;
-    width: min(80%, 40em);
+    width: min(70%, 30em);
     margin: auto;
-    border: 1px solid black;
     /* margin-top: 10em; */
     margin-bottom: 2em;
 }

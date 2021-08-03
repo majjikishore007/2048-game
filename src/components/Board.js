@@ -1,7 +1,6 @@
 import React from "react";
 import Block from "./Block";
 import "../styles/grid.css";
-import Swipe from "react-easy-swipe";
 const Board = (props) => {
   const { data } = props;
   return (
